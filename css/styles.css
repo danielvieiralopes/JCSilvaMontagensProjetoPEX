@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.hero {
+    background: url('/img/planta-industrial3.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.btn-primary-custom {
+    background-color: #007bff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #fff;
+}
+
+.btn-primary-custom:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Clientes */
+.clients-logos img {
+    max-width: 150px;
+    margin: 15px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.clients-logos img:hover {
+    filter: grayscale(0%);
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .card img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+
+    .card-body {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary-custom {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .clients-logos img {
+        max-width: 120px;
+        margin: 10px;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+}
+
+/* Estilo para a seta de rolar para cima */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    opacity: 0; /* Inicialmente invisível */
+    pointer-events: none; /* Não pode ser clicado quando invisível */
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1);
+}
+
+.scroll-to-top.show {
+    opacity: 1; /* Torna visível */
+    pointer-events: auto; /* Permite que seja clicado */
+}
