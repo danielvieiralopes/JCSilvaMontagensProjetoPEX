@@ -78,7 +78,23 @@ body {
     }
 }
 
+.custom-title {
+    font-size: 10rem; /* Tamanho grande */
+}
+
+.custom-subtitle {
+    font-size: 3rem; /* Tamanho original */
+}
+
 @media (max-width: 576px) {
+    .custom-title {
+        font-size: 3rem; /* Reduz o tamanho do título principal */
+    }
+
+    .custom-subtitle {
+        font-size: 1.5rem; /* Reduz o tamanho do subtítulo */
+    }
+
     .hero h1 {
         font-size: 3rem;
     }
